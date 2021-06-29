@@ -1,0 +1,50 @@
+.basket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.articlesCalcul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50em;
+}
+
+.price {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.number {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.total {
+    padding-left: 0.5em;
+}
+
+.listOfArticles {
+    min-height: 13em;
+}
+
+.basketTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+.confirmation {
+    border-style: solid;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 2em;
+    background-color: #F3E9F1;
+    border-color: #ad7aa3;
+}
+.lowSection {
+    display:flex;
+    justify-content:flex-end ;
+    padding: 1em;
+}
