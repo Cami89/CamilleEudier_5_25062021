@@ -1,0 +1,41 @@
+.presentationText {
+    padding: 0em 1em 1.5em 1em;
+    text-align: center;
+    background-color: #F3E9F1;
+}
+
+#teddies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+.teddy {
+    width: 40%;
+    height: 21em;
+    margin-bottom: 1em;
+    border: solid 0.1em #F3E9F1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.teddyImage {
+    height: 15em;
+    object-fit: cover;
+    border-bottom: solid 0.1em #F3E9F1;
+}
+h2 {
+    text-align: center;
+    padding: 0em;
+    margin-bottom: 0em;
+    margin-top: 0.5em;
+}
+h3 {
+    text-align: center;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-top: 0em;
+}
+

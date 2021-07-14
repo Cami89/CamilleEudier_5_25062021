@@ -5,37 +5,29 @@ section {
     justify-content: center;
 }
 
-.teddy {
+#teddy {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
-.teddyImage {
+#teddyImage {
     width: 50%;
     margin: auto;
     margin-bottom: 2em;
 }
 
-.teddySize {
-    display: flex;
-    flex-direction: row;
-}
-
-.sizeSelection {
-    width: 4em;
-    padding: 0.5em;
+button {
+    width: 15em;
+    padding: 1em;
     border-radius: 2em;
     border-color: #ad7aa3;
     border-style: solid;
     background-color: #F3E9F1;
-    margin-bottom: 2em;
-    margin: 0.5em;
+    margin: 2em;
     
 }
-.sizeSelection:focus {
-    background-color: greenyellow;
-}
+
 
 .AddToBasket {
     width: 12em;

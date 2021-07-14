@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mon panier - Orinoco</title>
-        <link rel="stylesheet" href="style-Panier.css" />
-        <link rel="stylesheet" href="style-HeaderAndFooter.css" />
+        <link rel="stylesheet" href="CSS/style-Panier.css" />
+        <link rel="stylesheet" href="CSS/style-HeaderAndFooter.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,24 +38,49 @@
 
     <section>
         <h1>Votre panier</h1>
-        <div class="basket">
-            <p class="articles">Articles</p>
-            <div class="articlesCalcul">
-                <p class="price">Prix</p>
-                <p class="number">Nombre</p>
-                <p class="total">Prix total</p>
-            </div>
-        </div>
-        <div class="listOfArticles">
+        
+            <table>
+                <tr class="titles"> 
+                    <td class="title">Articles</td>
+                    <td class="title">Couleur</td>
+                    <td class="title">Prix</td>
+                    <td class="title">Nombre</td>
+                    <td class="title">Prix total</td>
+                </tr>
+                <tr id="listOfArticles">
 
-        </div>
-        <div class="basketTotal">
-            <p>Montant total du panier</p>
-            <p>## €</p>
-        </div>
-        <div class="lowSection">
-            <a href="confirmation.html" class="confirmation">Confirmer la commande</a>
-        </div>
+                </tr> 
+            </table>
+            <div class="totalBloc">
+                <p class="basketTotal">Montant total du panier :</p>
+                <p class="basketTotalAmount">## €</p>
+            </div>
+        </div>  
+        
+        <h2 class="registerMessage">Merci d'indiquer ci-dessous vos coordonnées afin de finaliser la commande :</h2>
+        <form id="validationForm">
+            <div class="registerBloc">
+                <label for="name">Nom :</label> 
+                <input type="text" class="register" id="formName" name="name" placeholder="Nom" autofocus>
+            
+                <label for="first_name">Prénom :</label> 
+                <input type="text" class="register" id="formFirstName" name="first_name" placeholder="Prénom">
+            
+                <label for="address">Adresse :</label> 
+                <input type="text" class="register" id="formAddress" name="address" placeholder="Numéro et libellé de la voie">
+            
+                <label for="city">Ville :</label> 
+                <input type="text" class="register" id="formCity" name="city" placeholder="Ville">
+            
+                <label for="email">Email :</label> 
+                <input type="email" class="register" id="formEmail" name="email" placeholder="Exemple@email.com">
+            </div>
+            <div id="formErreur"></div>
+            <div class="confirmationBloc">
+                <input type="submit" id="confirmation" value="Valider et confirmer la commande">
+            </div>
+            
+        </form>
 
     </section>
     
@@ -83,5 +108,6 @@
             </li>
         </ul>
     </footer>
+    <script src="JS/panier.js"></script>
 </body>
 </html>

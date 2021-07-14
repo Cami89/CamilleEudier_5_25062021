@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orinoco</title>
-    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Fiche Produit - Orinoco</title>
+    <link rel="stylesheet" href="CSS/style-FicheProduit.css" />
     <link rel="stylesheet" href="CSS/style-HeaderAndFooter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +34,16 @@
                 </ul>
             </nav>
         </div>
-        <h1 class="presentationText">Choisissez parmis une large gamme d'ours en peluche !</h1>
     </header>
 
     <section>
-
-        <div id="teddies">
-
+        <div id="teddy">
+            <h1 id="name"></h1>
+            <img id="teddyImage">
+            <h2 id="price"></h2>
+            <p id="description"></p>
+            <select id="colors"></select>
+            <button id="addToBasket">Ajouter au Panier !</button>
         </div>
     </section>
 
@@ -68,7 +71,7 @@
             </li>
         </ul>
     </footer>
-    <script src="JS/index.js"></script>
+    <script src="JS/produit.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,111 @@
+
+.titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #F3E9F1;
+}
+
+.title {
+    width: 20%;
+}
+
+
+.articlesCalcul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50em;
+}
+
+
+
+#listOfArticles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    min-height: 13em;
+    padding: 1em;
+}
+.newArticle {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.newName {
+    width: 20%;
+}
+.newColor {
+    width: 20%;
+}
+.newPrice {
+    width: 20%;
+}
+.numberOfArticles {
+    width: 15%;
+}
+.newTotal {
+    width: 15%;
+}
+
+.totalBloc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #F3E9F1;
+}
+
+
+.basketTotalAmount {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+    border-style: solid;
+    border-color: #ad7aa3;
+    background-color: white;
+}
+
+#confirmation {
+    border-style: solid;
+    padding: 1em;
+    border-radius: 2em;
+    background-color: #F3E9F1;
+    border-color: #ad7aa3;
+    font-size: 1em;
+}
+.confirmationBloc {
+    display:flex;
+    justify-content:flex-end ;
+    padding: 1em;
+}
+.registerMessage {
+    text-align: end;
+    padding-right: 1em;
+    font-size: 1em;
+}
+.registerBloc {
+    display:flex;
+    padding: 1em;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+label {
+    width: 10%;
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+.register {
+    width: 30%;
+    margin-top: 0.5em;
+}
+
+.confirmationLink {
+    font-size: 1.2em;
+}
+#formErreur {
+    color: red;
+    text-align: end;
+    padding: 1em;
+}
