@@ -18,7 +18,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
     .then(res => {
         if (res.ok) {
             res.json().then(teddy => {
-                console.log(teddy) // à retirer
+
                 teddyName.innerHTML = teddy.name; 
                 description.innerHTML = teddy.description;
                 price.innerHTML = teddy.price / 100 + " €";

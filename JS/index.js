@@ -16,7 +16,7 @@ fetch("http://localhost:3000/api/teddies") // on va chercher les infos sur le se
                     const h2 = document.createElement("h2");
                     h2.innerHTML = teddy.name;
                     const h3 = document.createElement("h3");
-                    h3.innerHTML = teddy.price/100 + "€";
+                    h3.innerHTML = teddy.price/100 + " €";
                     container.appendChild(link);
                     link.appendChild(img);
                     link.appendChild(h2);

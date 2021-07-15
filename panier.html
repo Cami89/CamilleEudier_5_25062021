@@ -41,7 +41,7 @@
         
             <table>
                 <tr class="titles"> 
-                    <td class="title">Articles</td>
+                    <td class="title">Article</td>
                     <td class="title">Couleur</td>
                     <td class="title">Prix</td>
                     <td class="title">Nombre</td>
@@ -53,31 +53,35 @@
             </table>
             <div class="totalBloc">
                 <p class="basketTotal">Montant total du panier :</p>
-                <p class="basketTotalAmount">## €</p>
+                <p id="basketTotalAmount"></p>
             </div>
         </div>  
         
         <h2 class="registerMessage">Merci d'indiquer ci-dessous vos coordonnées afin de finaliser la commande :</h2>
         <form id="validationForm">
             <div class="registerBloc">
-                <label for="name">Nom :</label> 
-                <input type="text" class="register" id="formName" name="name" placeholder="Nom" autofocus>
+                <div class="formContact">
+                    <label for="name">Nom :</label> 
+                    <input type="text" class="register" id="formName" name="name" placeholder="Nom" autofocus>
+
+                    <label for="first_name">Prénom :</label> 
+                    <input type="text" class="register" id="formFirstName" name="first_name" placeholder="Prénom">
+                </div>
+                <div class="formContact">
+                    <label for="address">Adresse :</label> 
+                    <input type="text" class="register" id="formAddress" name="address" placeholder="Numéro et libellé de la voie">
             
-                <label for="first_name">Prénom :</label> 
-                <input type="text" class="register" id="formFirstName" name="first_name" placeholder="Prénom">
-            
-                <label for="address">Adresse :</label> 
-                <input type="text" class="register" id="formAddress" name="address" placeholder="Numéro et libellé de la voie">
-            
-                <label for="city">Ville :</label> 
-                <input type="text" class="register" id="formCity" name="city" placeholder="Ville">
-            
-                <label for="email">Email :</label> 
-                <input type="email" class="register" id="formEmail" name="email" placeholder="Exemple@email.com">
+                    <label for="city">Ville :</label> 
+                    <input type="text" class="register" id="formCity" name="city" placeholder="Ville">
+                </div>
+                <div class="formContact">
+                    <label for="email">Email :</label> 
+                    <input type="email" class="register" id="formEmail" name="email" placeholder="Exemple@email.com">
+                </div>
             </div>
             <div id="formErreur"></div>
             <div class="confirmationBloc">
-                <input type="submit" id="confirmation" value="Valider et confirmer la commande">
+                <input type="submit" id="confirmationButton" value="Valider et confirmer la commande">
             </div>
             
         </form>

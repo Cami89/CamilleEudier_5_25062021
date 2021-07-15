@@ -1,3 +1,6 @@
+table {
+    width: 100%;
+}
 
 .titles {
     display: flex;
@@ -11,16 +14,6 @@
     width: 20%;
 }
 
-
-.articlesCalcul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 50em;
-}
-
-
-
 #listOfArticles {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +26,6 @@
     display: flex;
     justify-content: flex-start;
 }
-
 .newName {
     width: 20%;
 }
@@ -57,9 +49,7 @@
     align-items: center;
     background-color: #F3E9F1;
 }
-
-
-.basketTotalAmount {
+#basketTotalAmount {
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em;
@@ -68,19 +58,6 @@
     background-color: white;
 }
 
-#confirmation {
-    border-style: solid;
-    padding: 1em;
-    border-radius: 2em;
-    background-color: #F3E9F1;
-    border-color: #ad7aa3;
-    font-size: 1em;
-}
-.confirmationBloc {
-    display:flex;
-    justify-content:flex-end ;
-    padding: 1em;
-}
 .registerMessage {
     text-align: end;
     padding-right: 1em;
@@ -88,24 +65,40 @@
 }
 .registerBloc {
     display:flex;
-    padding: 1em;
+    padding: 1em 1em 0em 1em;
     justify-content: flex-end;
     flex-wrap: wrap;
 }
+.formContact {
+    margin-bottom: 1em;
+}
 label {
-    width: 10%;
     padding: 0.5em 0.5em 0.5em 2em;
 }
 .register {
-    width: 30%;
     margin-top: 0.5em;
 }
 
+.confirmationBloc {
+    display:flex;
+    justify-content:flex-end ;
+    padding: 1em;
+}
+#confirmationButton {
+    border-style: solid;
+    padding: 1em;
+    border-radius: 2em;
+    background-color: #F3E9F1;
+    border-color: #ad7aa3;
+    font-size: 1em;
+}
 .confirmationLink {
     font-size: 1.2em;
 }
+
 #formErreur {
     color: red;
     text-align: end;
     padding: 1em;
 }
+

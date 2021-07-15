@@ -2,9 +2,9 @@
 const cartContent = JSON.parse(localStorage.getItem("cart"));
 
 for (const teddy of cartContent) {
-// je crée mes lignes de tableau ici
-    const newArticle = document.createElement("tr"); // créa d'un élément tr
-    newArticle.classList.add("newArticle"); // attribution de la class newArticle
+
+    const newArticle = document.createElement("tr"); 
+    newArticle.classList.add("newArticle"); 
 
     const newName = document.createElement("td");
     newName.classList.add("newName");
@@ -33,12 +33,20 @@ for (const teddy of cartContent) {
     /*newArticle.appendChild(numberOfArticles);
     newArticle.appendChild(newTotal)
 */
-console.log(teddy) // pour voir si je récupère bien mes petits ours tout mignon
+
 }
-            
+
+/* Total des articles 
+
+const TotalToPay = document.getElementById("basketTotalAmount");
+let sumPrice = 0;
+let addPrice = 0;
+addPrice = teddy.newTotal;
+sumPrice =  teddy.newTotal.lenght + addPrice;
+TotalToPay.innerHTML = sumPrice+" €"; */
 
 
-/*Validation du formulaire et ouverture de la page confirmation*/
+////* Validation du formulaire et ouverture de la page confirmation *////
 
 document.getElementById("validationForm").addEventListener("submit" , function(e){
     e.preventDefault();
@@ -70,10 +78,40 @@ document.getElementById("validationForm").addEventListener("submit" , function(e
         e.preventDefault();
         document.getElementById("formErreur").innerHTML = erreur;
         return false
-    } else {
-        window.location.href = "confirmation.html";
+
+    } else {        
+        const clientData ={
+            contact: {
+                firstName: firstName.value,
+                lastName: name.value,
+                address: address.value,
+                city: city.value,
+                email: email.value 
+            }
+        }
+
+        let clientContact = localStorage.setItem("clientContact" , clientData);
+        if (clientContact) {
+            const contact = JSON.parse(clientContact);
+            addToLocalStorage(contact, clientData);
+        }
+        else {
+            const contact = [];
+            addToLocalStorage(contact, clientData);
+        }
+        
+        //addToLocalStorage(totalToPay) ??// ajout du montant total à payer
+        window.location.href = "confirmation.html"; // ouverture de la page confirmation.
+       
+        
     }
 })
 
-/*Ajout des infos formulaire au local storage*/
+function addToLocalStorage(contact, clientData) {
+    contact.push(clientData);
+    const clientDataString = JSON.stringify(contact);
+    localStorage.setItem("clientContact" , clientDataString);
+}
+
+
 
