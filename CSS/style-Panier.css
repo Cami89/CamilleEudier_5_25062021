@@ -11,35 +11,28 @@ table {
 }
 
 .title {
-    width: 20%;
+    width: 33%;
 }
 
 #listOfArticles {
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
-    min-height: 13em;
     padding: 1em;
 }
 .newArticle {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    padding-bottom: 1em;
 }
 .newName {
-    width: 20%;
+    width: 33%;
 }
 .newColor {
-    width: 20%;
+    width: 33%;
 }
 .newPrice {
-    width: 20%;
-}
-.numberOfArticles {
-    width: 15%;
-}
-.newTotal {
-    width: 15%;
+    width: 33%;
 }
 
 .totalBloc {
