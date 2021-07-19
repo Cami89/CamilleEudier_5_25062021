@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon panier - Orinoco</title>
+    <link rel="stylesheet" href="../CSS/style-Panier.css" />
+    <link rel="stylesheet" href="../CSS/style-HeaderAndFooter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a89bd7c440.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="topHeader">
+            <img class="headerLogo" src="../images/logo.PNG" alt="logo">
+            <nav>
+                <ul class="headerMenu">
+                    <li class="headerList">
+                        <a class="headerLink" href="../HTML/index.html">Accueil</a>
+                    </li>
+                    <li class="headerList">
+                        <a class="headerLink" href="../HTML/panier.html">Panier</a>
+                    </li>
+                    <li class="headerList">
+                        <a class="headerLink" href="../HTML/index.html">Support</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <h1>Votre panier</h1>
+
+        <table>
+            <tr class="titles">
+                <td class="title">Article</td>
+                <td class="title">Couleur</td>
+                <td class="title">Prix</td>
+            </tr>
+            <tr id="listOfArticles"></tr>
+        </table>
+        <div class="totalBloc">
+            <p class="basketTotal">Montant total du panier :</p>
+            <p id="basketTotalAmount"></p>
+        </div>
+
+        <h2 class="registerMessage">Merci d'indiquer ci-dessous vos coordonnées afin de finaliser la commande :</h2>
+        <form id="validationForm">
+            <div class="registerBloc">
+                <div class="formContact">
+                    <label for="formName">Nom :</label>
+                    <input type="text" class="register" id="formName" name="formName" placeholder="Nom" autofocus>
+
+                    <label for="formFirstName">Prénom :</label>
+                    <input type="text" class="register" id="formFirstName" name="formFirstName" placeholder="Prénom">
+                </div>
+                <div class="formContact">
+                    <label for="formAddress">Adresse :</label>
+                    <input type="text" class="register" id="formAddress" name="formAddress"
+                        placeholder="Numéro et libellé de la voie">
+
+                    <label for="formCity">Ville :</label>
+                    <input type="text" class="register" id="formCity" name="formCity" placeholder="Ville">
+                </div>
+                <div class="formContact">
+                    <label for="formEmail">Email :</label>
+                    <input type="email" class="register" id="formEmail" name="formEmail" placeholder="Exemple@email.com">
+                </div>
+            </div>
+            <div id="formErreur"></div>
+            <div class="confirmationBloc">
+                <input type="submit" id="confirmationButton" value="Valider et confirmer la commande">
+            </div>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <ul class="footerList1">
+            <li>
+                <a href="../HTML/index.html">Contact</a>
+            </li>
+            <li>
+                <a href="../HTML/index.html">Presse</a>
+            </li>
+            <li>
+                <a href="../HTML/index.html">Carrières</a>
+            </li>
+        </ul>
+        <ul class="footerList2">
+            <li>
+                <a href="../HTML/index.html">FAQ</a>
+            </li>
+            <li>
+                <a href="../HTML/index.html">Livraison</a>
+            </li>
+            <li>
+                <a href="../HTML/index.html">Support</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="../JS/panier.js"></script>
+</body>
+
+</html>

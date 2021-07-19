@@ -64,7 +64,11 @@ table {
 }
 .formContact {
     margin-bottom: 1em;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
+
 label {
     padding: 0.5em 0.5em 0.5em 2em;
 }

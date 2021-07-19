@@ -17,7 +17,7 @@ section {
     margin-bottom: 2em;
 }
 
-button {
+#addToBasket {
     width: 15em;
     padding: 1em;
     border-radius: 2em;
@@ -25,17 +25,6 @@ button {
     border-style: solid;
     background-color: #F3E9F1;
     margin: 2em;
-    
 }
 
-
-.AddToBasket {
-    width: 12em;
-    padding: 1.5em;
-    border-radius: 2em;
-    border-color: #ad7aa3;
-    border-style: solid;
-    background-color: #F3E9F1;
-    margin: 2em;
-}
 

@@ -1,7 +1,12 @@
 
+// Traduction de l'objet JSON 
+
 const cartContent = JSON.parse(localStorage.getItem("cart"));
+
 let totalPrice = 0;
 const itemsId = [];
+
+// Récupération des données dans le Local Storage et création d'un tableau pour contenir les éléments
 
 for (const teddy of cartContent) {
     totalPrice += teddy.price;
@@ -31,9 +36,7 @@ for (const teddy of cartContent) {
 
 document.getElementById("basketTotalAmount").innerHTML = totalPrice / 100 + " €";
 
-
-
-/// Validation du formulaire et ouverture de la page confirmation  ///
+// Validation du formulaire 
 
 document.getElementById("validationForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -78,6 +81,8 @@ document.getElementById("validationForm").addEventListener("submit", function (e
             products: itemsId
         }
 
+// Ajout des informations de contact à l'URL, nettoyage du Local Storage et ouverture de la page de confirmation
+
         fetch("http://localhost:3000/api/teddies/order", {
             method: "POST",
             headers: {
@@ -89,7 +94,7 @@ document.getElementById("validationForm").addEventListener("submit", function (e
             if (res.ok) {
                 res.json().then(data => {
                     localStorage.clear();
-                    window.location.href = "confirmation.html?orderId=" + data.orderId + "&firstName=" + data.contact.firstName + "&totalPrice=" + totalPrice; // ouverture de la page confirmation.
+                    window.location.href = "confirmation.html?orderId=" + data.orderId + "&firstName=" + data.contact.firstName + "&totalPrice=" + totalPrice;
                 });
             }
         });
@@ -102,7 +107,7 @@ function addToLocalStorage(contact, clientData) {
     localStorage.setItem("clientContact", clientDataString);
 }
 
-// Validation des données du formaulaire //
+// Validation supplémentaire des données du formaulaire avec RegEx
 
 function validName(name) {
     const nameRegEx = /^[^0-9]+[a-zA-Z]+$/;
