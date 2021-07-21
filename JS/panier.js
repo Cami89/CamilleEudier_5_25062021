@@ -1,37 +1,33 @@
 
-// Traduction de l'objet JSON 
+// Récupération des données dans le LocalStorage et traduction de l'objet JSON 
 
 const cartContent = JSON.parse(localStorage.getItem("cart"));
+
+// Initialisation des variables 
 
 let totalPrice = 0;
 const itemsId = [];
 
-// Récupération des données dans le Local Storage et création d'un tableau pour contenir les éléments
+// Création d'une boucle et de blocs dans le tableau pour contenir les éléments
 
 for (const teddy of cartContent) {
     totalPrice += teddy.price;
     itemsId.push(teddy.id);
-
     const newArticle = document.createElement("tr");
     newArticle.classList.add("newArticle");
-
     const newName = document.createElement("td");
     newName.classList.add("newName");
     newName.innerHTML = teddy.name;
-
     const newColor = document.createElement("td");
     newColor.classList.add("newColor");
     newColor.innerHTML = teddy.color;
-
     const newPrice = document.createElement("td");
     newPrice.classList.add("newPrice");
     newPrice.innerHTML = teddy.price / 100 + " €";
-
     listOfArticles.appendChild(newArticle);
     newArticle.appendChild(newName);
     newArticle.appendChild(newColor);
     newArticle.appendChild(newPrice);
-
 }
 
 document.getElementById("basketTotalAmount").innerHTML = totalPrice / 100 + " €";
@@ -63,7 +59,6 @@ document.getElementById("validationForm").addEventListener("submit", function (e
     if (!email.value || !validEmail(email.value)) {
         erreur = "Veuillez renseigner votre email.";
     }
-
     if (erreur) {
         e.preventDefault();
         document.getElementById("formErreur").innerHTML = erreur;
@@ -107,28 +102,24 @@ function addToLocalStorage(contact, clientData) {
     localStorage.setItem("clientContact", clientDataString);
 }
 
-// Validation supplémentaire des données du formaulaire avec RegEx
+// Validation supplémentaire des données du formulaire avec RegEx
 
 function validName(name) {
     const nameRegEx = /^[^0-9]+[a-zA-Z]+$/;
     return nameRegEx.test(name);
 }
-
 function validFirstName(firstName) {
     const firstNameRegEx = /^[^0-9]+[a-zA-Z]+$/;
     return firstNameRegEx.test(firstName);
 }
-
 function validAddress(address) {
     const addressRegEx = /^[0-9]+[a-zA-Z\u0080-\u024F\s\/\-\)\(\`\.\"\']+$/;
     return addressRegEx.test(address);
 }
-
 function validCity(city) {
     const cityRegEx = /^[a-zA-Z\u0080-\u024F\s\/\-\)\(\`\.\"\']+$/;
     return cityRegEx.test(city);
 }
-
 function validEmail(email) {
     const emailRegEx = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/;
     return emailRegEx.test(email);

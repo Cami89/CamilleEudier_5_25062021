@@ -1,4 +1,4 @@
-// Recupération de l'id dans l'URL 
+// Récupération de l'id dans l'URL 
 
 function getUrlParameter(name) {
     const parameters = new URLSearchParams(window.location.search);
@@ -14,19 +14,21 @@ const price = document.getElementById("price");
 const teddyImage = document.getElementById("teddyImage");
 const colors = document.getElementById("colors");
 
-// Récupération des données du server pour un seul ours/id 
+// Récupération des données du server pour un seul ours/id et traduction JSON 
 
 fetch("http://localhost:3000/api/teddies/" + id)
     .then(res => {
         if (res.ok) {
             res.json().then(teddy => {
 
+// Incrustation des données         
+
                 teddyName.innerHTML = teddy.name;
                 description.innerHTML = teddy.description;
                 price.innerHTML = teddy.price / 100 + " €";
                 teddyImage.src = teddy.imageUrl;
 
-// Création des options de couleurs 
+// Création d'une boucle pour les options de couleurs 
 
                 for (const color of teddy.colors) {
                     const option = document.createElement("option");

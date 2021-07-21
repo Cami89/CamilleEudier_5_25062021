@@ -1,12 +1,11 @@
 const container = document.getElementById("teddies");
 
-// Récupération des données de l'api puis incrustation dynamique dans l'HTML 
+// Récupération des données de l'api puis incrustation dans l'HTML 
 
 fetch("http://localhost:3000/api/teddies")
     .then(res => {
         if (res.ok) {
             res.json().then(teddies => {
-                console.log(teddies)
 
                 for (const teddy of teddies) {
                     const link = document.createElement("a");

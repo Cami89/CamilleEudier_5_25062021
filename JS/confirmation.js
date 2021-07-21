@@ -14,9 +14,7 @@ const totalPrice = getUrlParameter("totalPrice");
 
 const clientName = document.getElementById("clientName");
 clientName.innerHTML = firstName;
-
 const orderNumber = document.getElementById("orderNumber");
 orderNumber.innerHTML = orderId;
-
-const orderTotal = document.getElementById("orderTotal")
+const orderTotal = document.getElementById("orderTotal");
 orderTotal.innerHTML = totalPrice / 100 + " €";
