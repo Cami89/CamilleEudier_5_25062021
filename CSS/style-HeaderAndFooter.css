@@ -2,19 +2,10 @@ body {
     max-width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
-section {
-    padding: 1em;
-}
 header {
     background-color: #F3E9F1;
     padding-left: 1em;
     padding-right: 1em;
-}
-a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
 }
 .topHeader {
     display: flex;
@@ -37,9 +28,15 @@ li {
     display: flex;
     justify-content: flex-end;
 }
-
-
-
+section {
+    padding: 1em;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
 footer {
     display:flex;
     flex-direction: row;
@@ -47,7 +44,6 @@ footer {
     padding-top: 2em;
     padding-bottom: 2em;
 }
-
 .footerList1 {
     padding-right: 4em;
 }

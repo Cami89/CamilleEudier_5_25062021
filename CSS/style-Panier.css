@@ -1,7 +1,6 @@
-table {
+table { 
     width: 100%;
 }
-
 .titles {
     display: flex;
     flex-direction: row;
@@ -9,7 +8,6 @@ table {
     padding: 1em;
     background-color: #F3E9F1;
 }
-
 .title {
     width: 33%;
 }
@@ -34,7 +32,6 @@ table {
 .newPrice {
     width: 33%;
 }
-
 .totalBloc {
     display: flex;
     flex-direction: row;

@@ -3,7 +3,6 @@
     text-align: center;
     background-color: #F3E9F1;
 }
-
 #teddies {
     display: flex;
     flex-direction: row;
@@ -38,4 +37,3 @@ h3 {
     padding: 0.5em 1em 0.5em 1em;
     margin-top: 0em;
 }
-

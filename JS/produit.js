@@ -36,7 +36,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
                     option.innerHTML = color;
                     colors.appendChild(option);
                 }
-
+  
 // Envoi vers le Local Storage 
 
                 const addToBasket = document.getElementById('addToBasket');

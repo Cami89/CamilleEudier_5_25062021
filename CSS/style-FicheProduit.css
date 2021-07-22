@@ -4,7 +4,6 @@ section {
     align-items: center;
     justify-content: center;
 }
-
 #teddy {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@ section {
     margin: auto;
     margin-bottom: 2em;
 }
-
 #addToBasket {
     width: 15em;
     padding: 1em;

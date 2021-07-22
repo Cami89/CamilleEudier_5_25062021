@@ -8,6 +8,7 @@ fetch("http://localhost:3000/api/teddies")
             res.json().then(teddies => {
 
                 for (const teddy of teddies) {
+                    
                     const link = document.createElement("a");
                     link.href = "produit.html?id=" + teddy._id;
                     link.classList.add("teddy");
